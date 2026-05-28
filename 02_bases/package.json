@@ -1,0 +1,23 @@
+{
+  "name": "02_bases",
+  "version": "0.0.1",
+  "description": "bases node",
+  "license": "ISC",
+  "author": "diego capriglione",
+  "type": "commonjs",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.11"
+  },
+  "dependencies": {
+    "axios": "^1.13.6",
+    "get-age": "^1.0.1",
+    "uuid": "^13.0.0",
+    "winston": "^3.19.0"
+  }
+}
