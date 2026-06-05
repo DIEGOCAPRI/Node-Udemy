@@ -1,10 +1,7 @@
-export interface Hero {
-id: number;
-name: string;
-owner: string;
-}
-
-export const heroes:Hero[] = [
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.heroes = void 0;
+exports.heroes = [
     {
         id: 1,
         name: "Ironman",
@@ -21,3 +18,4 @@ export const heroes:Hero[] = [
         owner: "DC"
     },
 ];
+//# sourceMappingURL=heroes.js.map
