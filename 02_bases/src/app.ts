@@ -51,11 +51,19 @@ getPokemonById(4)
    .finally(()=> console.log('Finalizado'))
    */
 
-/*winston logger*/
-
+/*winston logger
 const {buildLogger} = require('./plugins');
 
 const logger = buildLogger('app.js');
 
 logger.log('Hola Mundo');
 logger.error('Esto es un error');
+
+TS
+*/
+
+import { buildLogger } from "./plugins/logger.plugin";
+
+const logger = buildLogger('app.js');
+
+logger.log('Hola mundo');

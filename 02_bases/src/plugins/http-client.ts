@@ -1,7 +1,8 @@
-const axios = require("axios");
 
-const httpClient = {
-    get : async(url)=> {
+import axios from 'axios';
+
+export const httpClient = {
+    get : async(url:string)=> {
         try{
            const response = await axios.get(url);
            const data =   response.data;
