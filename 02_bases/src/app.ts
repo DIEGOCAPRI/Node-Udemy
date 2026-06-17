@@ -62,8 +62,8 @@ logger.error('Esto es un error');
 TS
 */
 
-import { buildLogger } from "./plugins/logger.plugin";
+///import { buildLogger } from "./plugins/logger.plugin";
 
-const logger = buildLogger('app.js');
+///const logger = buildLogger('app.js');
 
-logger.log('Hola mundo');
+///logger.log('Hola mundo');

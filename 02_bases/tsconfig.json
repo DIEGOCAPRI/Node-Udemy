@@ -1,4 +1,6 @@
 {
+  "include": ["src/**/*","test/**/*"],
+  "exclude": ["node_modules", "**/*.spec.ts","**/*.test.ts"],
   // Visit https://aka.ms/tsconfig to read more about this file
   "compilerOptions": {
     // File Layout
@@ -10,7 +12,7 @@
     "module": "commonjs",
     "target": "es2020",
     "esModuleInterop": true,
-    "types": ["node"],
+    "types": ["node", "jest"],
     // For nodejs:
     // "lib": ["esnext"],
     // "types": ["node"],
@@ -41,5 +43,6 @@
     "noUncheckedSideEffectImports": true,
     "moduleDetection": "force",
     "skipLibCheck": true,
+    //"ignoreDeprecations": "6.0",
   }
 }
