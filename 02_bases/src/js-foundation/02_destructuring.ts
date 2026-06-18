@@ -2,6 +2,6 @@
 
 const {SHELL, HOMEBREW_PREFIX} = process.env;
 
-const characters = ['Superman', 'Flash', 'test','Batman'];
+export const characters = ['Superman', 'Flash', 'test','Batman'];
 
 const [ , , batman] = characters;
