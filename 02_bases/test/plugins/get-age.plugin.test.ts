@@ -20,4 +20,19 @@ describe('Test age plugin',()=> {
         expect(age).toBe(currentAge);
     })
 
+    test('getAge should return 0 years', ()=>{
+
+        ///aca Date es el obeto y getFullYear el métdo de ese objeto
+        ///mockReturnValue es el valor que simulo devolver. Valor de pruebas
+        const spy = jest.spyOn(Date.prototype,'getFullYear').mockReturnValue(1995);
+
+        const birthdate = '1995-03-04';
+        const age = getAge(birthdate);
+
+        expect(age).toBe(0);
+        expect(spy).toHaveBeenCalled();
+        ///El spy hace que getFullYear devuelva siempre 1995 como año actual por lo cual la edad da 0
+        /// toHaveBeenCalled confirma que el spy se haya llamado
+    })
+
 })
