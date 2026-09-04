@@ -1,26 +1,33 @@
 import * as fs from 'fs';
+import { yarg } from './config/plugins/yargs.plugins';
+
+
 
 let outPutMessage = '';
 
-const mult = 5;
+const {b, s, l} =  yarg;
+
+
 const header =  `
 =====================================
-      Tabla del ${mult}
+      Tabla del ${b}
 =====================================      
 `;
 
-for (let i = 1 ; i <= 10 ; i++) {
-    outPutMessage += `${mult} x ${i} = ${mult * i}\n `;
+for (let i = 1 ; i <= l ; i++) {
+    outPutMessage += `${b} x ${i} = ${b * i}\n `;
 }
 
 outPutMessage += `${header}\n ${outPutMessage}`;
 
-console.log(outPutMessage);
 
+if(s){
+console.log(outPutMessage);
+}
 ///escribir en u archivo
 
 const outPath = 'outputs';
 
 fs.mkdirSync(outPath, {recursive:true});
 
-fs.writeFileSync(`outputs/tabla-${mult}.txt`, outPutMessage);
+fs.writeFileSync(`outputs/tabla-${b}.txt`, outPutMessage);

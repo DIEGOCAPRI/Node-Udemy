@@ -1,6 +1,14 @@
 import { yarg } from "./config/plugins/yargs.plugins";
+import { ServerApp } from "./presentation/server-app";
 
 
-console.log(process.argv);
+(async ()=> {
+   await main();
+})()
 
-console.log(yarg);
+async function main (){
+
+   const {b:mult , l:limit, s:show, n: name, d: destination} = yarg;
+   
+   ServerApp.run({mult, limit, show, name, destination});
+}
